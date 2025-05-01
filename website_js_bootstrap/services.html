@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Empresa – Servicios</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Icons & Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="images/fire-303309_640.png" alt="Logo Mi Empresa" height="30"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portafolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido Servicios -->
+  <main class="container py-5" data-aos="fade-up">
+    <h1 class="text-center">Nuestros Servicios</h1>
+    <div class="row text-center mt-4">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <h4>Consultoría</h4>
+        <p>Te ayudamos a definir y lograr tus objetivos de negocio.</p>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <h4>Desarrollo</h4>
+        <p>Construimos soluciones digitales a medida para ti.</p>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <h4>Marketing</h4>
+        <p>Potenciamos tu presencia online y alcanzamos más clientes.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; <span id="year"></span> Mi Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, offset: 200, easing: 'ease-in-out-cubic' });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      const dt = document.documentElement;
+      dt.dataset.theme = dt.dataset.theme === 'dark' ? '' : 'dark';
+    });
+  </script>
+</body>
+</html>
